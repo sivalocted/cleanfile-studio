@@ -1,12 +1,13 @@
 :root {
   --bg: #f5f5f7;
   --surface: #ffffff;
-  --surface-soft: rgba(255, 255, 255, 0.75);
+  --surface-soft: rgba(255, 255, 255, 0.7);
   --ink: #1d1d1f;
   --muted: #6e6e73;
   --line: #d2d2d7;
-  --accent: #0071e3;
-  --accent-soft: rgba(0, 113, 227, 0.12);
+  --accent: #0066cc;
+  --accent-strong: #007aff;
+  --accent-soft: rgba(0, 102, 204, 0.12);
   --shadow: rgba(0, 0, 0, 0.08);
   --shadow-strong: rgba(0, 0, 0, 0.16);
 }
@@ -21,9 +22,9 @@ html {
 
 body {
   margin: 0;
-  font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Futura", sans-serif;
+  font-family: "SF Pro Text", "SF Pro Display", "Avenir Next", "Helvetica Neue", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at top, #ffffff 0%, #f5f5f7 55%, #eef1f7 100%);
+  background: radial-gradient(circle at top, #ffffff 0%, #f5f5f7 45%, #eef1f7 100%);
   min-height: 100vh;
 }
 
@@ -56,11 +57,29 @@ h4 {
   margin: 0 auto;
 }
 
+.top-banner {
+  background: #111111;
+  color: #f5f5f7;
+  font-size: 0.85rem;
+  padding: 10px 0;
+}
+
+.top-banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.top-banner span {
+  color: #c6c6c9;
+}
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(245, 245, 247, 0.86);
+  background: rgba(245, 245, 247, 0.85);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid transparent;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
@@ -92,7 +111,7 @@ h4 {
   height: 34px;
   border-radius: 10px;
   background: linear-gradient(135deg, #0a84ff, #77d7ff);
-  box-shadow: 0 12px 24px rgba(0, 113, 227, 0.24);
+  box-shadow: 0 14px 24px rgba(0, 113, 227, 0.24);
 }
 
 .brand-sub {
@@ -109,6 +128,17 @@ h4 {
   color: var(--muted);
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.nav-links a {
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a.is-active {
+  color: var(--ink);
+  border-color: var(--accent);
 }
 
 .button {
@@ -143,21 +173,35 @@ h4 {
   font-size: 0.92rem;
 }
 
+.button:focus-visible,
+.nav-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 48px;
+  gap: 52px;
   align-items: center;
-  padding: 80px 0 40px;
+  padding: 80px 0 50px;
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-  line-height: 1.05;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.03;
 }
 
 .hero p {
   font-size: 1.1rem;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .hero-cta {
@@ -173,19 +217,35 @@ h4 {
   color: var(--muted);
 }
 
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.meta-pill {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 .hero-visual {
   background: var(--surface-soft);
-  border-radius: 28px;
-  padding: 24px;
+  border-radius: 30px;
+  padding: 28px;
   border: 1px solid rgba(210, 210, 215, 0.6);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
   padding: 18px 20px;
   border: 1px solid rgba(210, 210, 215, 0.7);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
@@ -248,7 +308,7 @@ h4 {
 }
 
 .section {
-  padding: 70px 0;
+  padding: 80px 0;
 }
 
 .section-title {
@@ -258,25 +318,10 @@ h4 {
   margin-bottom: 24px;
 }
 
-.eyebrow {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  font-weight: 600;
-}
-
 .grid {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-}
-
-.split {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: start;
 }
 
 .card {
@@ -285,6 +330,23 @@ h4 {
   padding: 22px;
   border: 1px solid rgba(210, 210, 215, 0.6);
   box-shadow: 0 18px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 1.15rem;
+}
+
+.split {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
 }
 
 .side-card {
@@ -297,32 +359,18 @@ h4 {
   gap: 14px;
 }
 
-.card h3 {
-  font-size: 1.15rem;
-}
-
-.callout {
-  border-radius: 28px;
-  padding: 32px;
-  background: linear-gradient(135deg, rgba(0, 113, 227, 0.08), rgba(119, 215, 255, 0.2));
-  border: 1px solid rgba(0, 113, 227, 0.2);
+.timeline {
   display: grid;
-  gap: 16px;
+  gap: 20px;
 }
 
-.badge-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.badge {
-  background: rgba(0, 0, 0, 0.04);
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  color: var(--muted);
+.timeline-step {
+  display: grid;
+  gap: 8px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(210, 210, 215, 0.4);
 }
 
 .table-wrap {
@@ -381,6 +429,30 @@ h4 {
   font-weight: 600;
   display: inline-flex;
   width: fit-content;
+}
+
+.callout {
+  border-radius: 30px;
+  padding: 36px;
+  background: linear-gradient(135deg, rgba(0, 113, 227, 0.08), rgba(119, 215, 255, 0.2));
+  border: 1px solid rgba(0, 113, 227, 0.2);
+  display: grid;
+  gap: 16px;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.badge {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .form {
@@ -444,6 +516,11 @@ h4 {
 
   .nav-links {
     justify-content: flex-start;
+  }
+
+  .top-banner .container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero {
