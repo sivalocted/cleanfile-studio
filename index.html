@@ -7,130 +7,226 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <nav class="nav">
-        <div class="brand">
-          <div class="brand-badge"></div>
-          <div>
+    <header class="site-header" data-header>
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"></span>
+          <span>
             CleanFile Studio
-            <div style="font-size: 0.85rem; color: var(--muted);">
-              AI-assisted data cleanup
+            <div class="brand-sub">AI-assisted data cleanup</div>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#how">How it works</a>
+          <a href="#use">Use cases</a>
+          <a href="#pricing">Pricing</a>
+          <a class="button small" href="intake.html">Get a free sample</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy reveal" data-reveal>
+          <h1>Clean data. Ready to use.</h1>
+          <p>
+            Turn PDFs, scans, and messy lists into accurate spreadsheets. You
+            get AI speed plus human checks, delivered in 24-48 hours.
+          </p>
+          <div class="hero-cta">
+            <a class="button" href="intake.html">Request a free sample</a>
+            <a class="button ghost" href="#pricing">See pricing</a>
+          </div>
+          <div class="hero-note">
+            No software to install. Excel, Google Sheets, or CSV delivery.
+          </div>
+          <div class="metrics">
+            <div class="metric-card">
+              <h3>AI + human review</h3>
+              <p>Every batch is checked for accuracy and consistency.</p>
+            </div>
+            <div class="metric-card">
+              <h3>Custom columns</h3>
+              <p>Match your template or define columns from scratch.</p>
+            </div>
+            <div class="metric-card">
+              <h3>Fast turnaround</h3>
+              <p>Typical delivery in 24-48 hours for most jobs.</p>
             </div>
           </div>
         </div>
-        <div class="nav-links">
-          <a href="#how">How it works</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#examples">Example</a>
-          <a class="button secondary" href="intake.html">Start now</a>
-        </div>
-      </nav>
 
-      <section class="hero">
-        <div class="hero-card reveal" data-reveal>
-          <h1>Turn messy files into clean spreadsheets in 24-48 hours.</h1>
-          <p>
-            I help small businesses and busy teams convert PDFs, scans, receipts,
-            and invoices into clean, accurate spreadsheets. You send the files,
-            I deliver a ready-to-use sheet.
-          </p>
-          <div class="cta-row">
-            <a class="button" href="intake.html">Get a free quote</a>
-            <a class="button secondary" href="#pricing">See pricing</a>
+        <div class="hero-visual reveal" data-reveal>
+          <div class="glass-card">
+            <div class="chip">Raw file</div>
+            <div class="mono">
+              INV#1043 | 03/18 | Adworks LLC | $1,204.50\n
+              Inv 1044 03/20 Bright Co. 450.00 USD\n
+              Payment - 03/22 - Westside | $78.90
+            </div>
           </div>
-        </div>
-        <div class="hero-card reveal" data-reveal>
-          <h3>What you get</h3>
-          <ul class="hero-list">
-            <li><span>Fast</span> 24-48 hour turnaround</li>
-            <li><span>Clean</span> formatted, validated data</li>
-            <li><span>Simple</span> Excel or Google Sheets</li>
-          </ul>
-          <div class="tags" style="margin-top: 18px;">
-            <span>Receipts</span>
-            <span>Invoices</span>
-            <span>Bank statements</span>
-            <span>Surveys</span>
-            <span>Product lists</span>
+          <div class="glass-card">
+            <div class="chip">Clean spreadsheet</div>
+            <table class="mini-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Vendor</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2024-03-18</td>
+                  <td>Adworks LLC</td>
+                  <td>1204.50</td>
+                </tr>
+                <tr>
+                  <td>2024-03-20</td>
+                  <td>Bright Co.</td>
+                  <td>450.00</td>
+                </tr>
+                <tr>
+                  <td>2024-03-22</td>
+                  <td>Westside</td>
+                  <td>78.90</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
-      <section id="how" class="section">
+      <section class="section container" id="how">
         <div class="section-title">
-          <span class="pill">Process</span>
+          <span class="eyebrow">Process</span>
           <h2>How it works</h2>
         </div>
         <div class="grid">
           <div class="card reveal" data-reveal>
             <h3>1. Send your files</h3>
             <p>
-              Upload your PDFs or scans and share the link in the intake form.
-              Tell me what columns you need and the deadline.
+              Share a link to your PDFs, scans, or spreadsheets. Tell us the
+              columns you want and your deadline.
             </p>
           </div>
           <div class="card reveal" data-reveal>
-            <h3>2. I clean & verify</h3>
+            <h3>2. We clean and verify</h3>
             <p>
-              I use AI plus manual checks to extract the data and clean it so
-              it is consistent and ready for your workflow.
+              AI extraction plus manual validation for consistency, formatting,
+              and missing data flags.
             </p>
           </div>
           <div class="card reveal" data-reveal>
-            <h3>3. You get a sheet</h3>
+            <h3>3. Get a ready sheet</h3>
             <p>
-              You receive a spreadsheet with clear headers, formatting, and any
-              notes about edge cases or missing values.
+              Receive a clean spreadsheet with clear headers and notes for any
+              edge cases or uncertainties.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="pricing" class="section">
+      <section class="section container" id="use">
         <div class="section-title">
-          <span class="pill">Pricing</span>
-          <h2>Simple, transparent pricing</h2>
+          <span class="eyebrow">Use cases</span>
+          <h2>Designed for busy teams</h2>
         </div>
         <div class="grid">
-          <div class="card pricing reveal" data-reveal>
-            <h3>Quick Cleanup</h3>
-            <p class="price">$50</p>
-            <p>1-5 pages or up to 100 rows.</p>
-            <p class="highlight">Great for small batches.</p>
+          <div class="card reveal" data-reveal>
+            <h3>Invoices & receipts</h3>
+            <p>Track expenses, vendors, and payment details.</p>
           </div>
-          <div class="card pricing reveal" data-reveal>
-            <h3>Business Batch</h3>
-            <p class="price">$120</p>
-            <p>6-25 pages or up to 600 rows.</p>
-            <p class="highlight">Most popular option.</p>
+          <div class="card reveal" data-reveal>
+            <h3>Product catalogs</h3>
+            <p>Turn supplier lists into clean, searchable inventory.</p>
           </div>
-          <div class="card pricing reveal" data-reveal>
-            <h3>Monthly Flow</h3>
-            <p class="price">$300+</p>
-            <p>Weekly or monthly files.</p>
-            <p class="highlight">Great for recurring work.</p>
+          <div class="card reveal" data-reveal>
+            <h3>Bank statements</h3>
+            <p>Extract transactions into a structured ledger.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <h3>Survey responses</h3>
+            <p>Organize text answers and ratings into columns.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <h3>Vendor lists</h3>
+            <p>Normalize contact details and service categories.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <h3>Operations logs</h3>
+            <p>Convert daily logs into analysis-ready rows.</p>
           </div>
         </div>
       </section>
 
-      <section id="examples" class="section">
+      <section class="section container">
         <div class="section-title">
-          <span class="pill">Example</span>
+          <span class="eyebrow">Why CleanFile</span>
+          <h2>Accuracy built in</h2>
+        </div>
+        <div class="grid">
+          <div class="card reveal" data-reveal>
+            <h3>Two-pass validation</h3>
+            <p>
+              Each batch is reviewed after AI extraction to reduce errors and
+              keep formatting consistent.
+            </p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <h3>Flexible templates</h3>
+            <p>
+              We can match your existing sheet or build a new one with the
+              fields you need.
+            </p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <h3>Corrections included</h3>
+            <p>
+              If we missed anything, send it back within 7 days and we will fix
+              it fast.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-title">
+          <span class="eyebrow">Add-ons</span>
+          <h2>Extras that make the data usable</h2>
+        </div>
+        <div class="grid">
+          <div class="card reveal" data-reveal>
+            <h3>Categorization tags</h3>
+            <p>Add categories or tags to each row for easier filtering.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <h3>Duplicate detection</h3>
+            <p>Identify potential duplicates and highlight them.</p>
+          </div>
+          <div class="card reveal" data-reveal>
+            <h3>Summary totals</h3>
+            <p>Provide totals by vendor, month, or category.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-title">
+          <span class="eyebrow">Example</span>
           <h2>Before and after</h2>
         </div>
         <div class="table-wrap reveal" data-reveal>
           <table>
             <thead>
               <tr>
-                <th>Messy input (raw text)</th>
-                <th>Clean spreadsheet output</th>
+                <th>Messy input</th>
+                <th>Clean output</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  INV #1043 | 03/18 | Adworks LLC | $1,204.50
-                </td>
+                <td>INV #1043 | 03/18 | Adworks LLC | $1,204.50</td>
                 <td>Invoice 1043 | 2024-03-18 | Adworks LLC | 1204.50</td>
               </tr>
               <tr>
@@ -146,43 +242,80 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section container" id="pricing">
         <div class="section-title">
-          <span class="pill">FAQ</span>
+          <span class="eyebrow">Pricing</span>
+          <h2>Simple pricing for any size</h2>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card reveal" data-reveal>
+            <h3>Quick Cleanup</h3>
+            <div class="price">$50</div>
+            <p>1-5 pages or up to 100 rows.</p>
+            <span class="highlight">Great for small batches</span>
+          </div>
+          <div class="pricing-card reveal" data-reveal>
+            <h3>Business Batch</h3>
+            <div class="price">$120</div>
+            <p>6-25 pages or up to 600 rows.</p>
+            <span class="highlight">Most popular</span>
+          </div>
+          <div class="pricing-card reveal" data-reveal>
+            <h3>Monthly Flow</h3>
+            <div class="price">$300+</div>
+            <p>Weekly or monthly recurring files.</p>
+            <span class="highlight">Best for ongoing work</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="callout reveal" data-reveal>
+          <h2>Try a free sample</h2>
+          <p>
+            Send one sample file and we will return a cleaned preview so you can
+            confirm the formatting before placing a full order.
+          </p>
+          <div class="hero-cta">
+            <a class="button" href="intake.html">Start your intake</a>
+            <a class="button ghost" href="intake.html">Ask a question</a>
+          </div>
+          <div class="badge-row">
+            <span class="badge">Excel</span>
+            <span class="badge">Google Sheets</span>
+            <span class="badge">CSV</span>
+            <span class="badge">Confidential handling</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-title">
+          <span class="eyebrow">FAQ</span>
           <h2>Common questions</h2>
         </div>
         <div class="grid">
           <div class="card reveal" data-reveal>
             <h3>What file types do you accept?</h3>
-            <p>PDFs, scanned images, screenshots, and Excel/CSV files.</p>
+            <p>PDFs, scans, screenshots, and spreadsheets.</p>
           </div>
           <div class="card reveal" data-reveal>
-            <h3>How fast is delivery?</h3>
-            <p>Most small jobs are delivered within 24-48 hours.</p>
+            <h3>How do you handle privacy?</h3>
+            <p>Files are used only to complete your job and shared only with you.</p>
           </div>
           <div class="card reveal" data-reveal>
             <h3>Can you match my template?</h3>
-            <p>Yes. Just share a sample sheet or describe the columns.</p>
+            <p>Yes, send a sample sheet or describe your columns.</p>
           </div>
         </div>
       </section>
+    </main>
 
-      <section class="section">
-        <div class="callout reveal" data-reveal>
-          <h2>Ready to clean up your data?</h2>
-          <p>
-            Fill out the intake form and I will reply with a quote and a quick
-            timeline. If you are unsure, send one sample file and I will suggest
-            the best package.
-          </p>
-          <a class="button" href="intake.html">Start your intake</a>
-        </div>
-      </section>
-
-      <footer class="footer">
+    <footer class="footer">
+      <div class="container">
         <p>CleanFile Studio &copy; <span data-year></span></p>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

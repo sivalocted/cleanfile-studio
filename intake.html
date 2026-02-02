@@ -7,144 +7,141 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <nav class="nav">
-        <div class="brand">
-          <div class="brand-badge"></div>
-          <div>
+    <header class="site-header" data-header>
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"></span>
+          <span>
             CleanFile Studio
-            <div style="font-size: 0.85rem; color: var(--muted);">
-              Intake form
+            <div class="brand-sub">AI-assisted data cleanup</div>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#pricing">Pricing</a>
+          <a class="button small" href="index.html">Back to home</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section container">
+        <div class="section-title">
+          <span class="eyebrow">Intake</span>
+          <h2>Tell us about your files</h2>
+        </div>
+        <p>
+          Share your project details and we will reply with a quote and timeline
+          within 12 hours.
+        </p>
+        <div class="notice">
+          Submitting this form opens your email client. Want a cleaner form?
+          Send a Google Form link and we will swap it in for free.
+        </div>
+
+        <div class="split" style="margin-top: 24px;">
+          <div class="card reveal" data-reveal>
+            <form
+              class="form"
+              action="mailto:sirivurisiva@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div>
+                <label for="company">Company (optional)</label>
+                <input id="company" name="company" type="text" />
+              </div>
+              <div>
+                <label for="filelink">File link (Google Drive / Dropbox)</label>
+                <input
+                  id="filelink"
+                  name="filelink"
+                  type="url"
+                  placeholder="https://..."
+                  required
+                />
+              </div>
+              <div>
+                <label for="filetype">File type</label>
+                <select id="filetype" name="filetype" required>
+                  <option value="PDF">PDF</option>
+                  <option value="Scan">Scan / Image</option>
+                  <option value="Mixed">Mixed files</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="rows">Approximate number of pages or rows</label>
+                <input id="rows" name="rows" type="text" placeholder="10 pages" />
+              </div>
+              <div>
+                <label for="deadline">Deadline</label>
+                <input id="deadline" name="deadline" type="text" placeholder="48 hours" />
+              </div>
+              <div>
+                <label for="columns">Columns needed (comma separated)</label>
+                <input
+                  id="columns"
+                  name="columns"
+                  type="text"
+                  placeholder="Date, Vendor, Amount"
+                  required
+                />
+              </div>
+              <div>
+                <label for="notes">Notes or special instructions</label>
+                <textarea id="notes" name="notes"></textarea>
+              </div>
+              <button class="button" type="submit">Send request</button>
+            </form>
+          </div>
+
+          <div class="side-card reveal" data-reveal>
+            <h3>What happens next</h3>
+            <p>
+              We will confirm scope, pricing, and delivery time. You can request
+              a free sample preview before the full job starts.
+            </p>
+            <div>
+              <h4>Typical timeline</h4>
+              <p>Small jobs: 24-48 hours. Larger batches: 3-5 days.</p>
+            </div>
+            <div>
+              <h4>Delivery options</h4>
+              <p>Excel, Google Sheets, or CSV.</p>
+            </div>
+            <div>
+              <h4>Need it faster?</h4>
+              <p>Mention it in the notes and we will try to prioritize.</p>
             </div>
           </div>
         </div>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a class="button secondary" href="index.html#pricing">Pricing</a>
-        </div>
-      </nav>
-
-      <section class="section">
-        <div class="section-title">
-          <span class="pill">Step 1</span>
-          <h2>Share your project details</h2>
-        </div>
-        <p>
-          Fill in the details below. Once submitted, you will receive a quote and
-          delivery timeline within 12 hours.
-        </p>
-        <div class="notice">
-          Replace <strong>sirivurisiva@gmail.com</strong> in this file with your
-          real email so submissions go to you.
-        </div>
-        <form
-          class="form"
-          action="mailto:sirivurisiva@gmail.com"
-          method="post"
-          enctype="text/plain"
-        >
-          <div>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-          <div>
-            <label for="company">Company (optional)</label>
-            <input id="company" name="company" type="text" />
-          </div>
-          <div>
-            <label for="filelink">File link (Google Drive / Dropbox)</label>
-            <input
-              id="filelink"
-              name="filelink"
-              type="url"
-              placeholder="https://..."
-              required
-            />
-          </div>
-          <div>
-            <label for="filetype">File type</label>
-            <select id="filetype" name="filetype" required>
-              <option value="PDF">PDF</option>
-              <option value="Scan">Scan / Image</option>
-              <option value="Mixed">Mixed files</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div>
-            <label for="rows">Approximate number of pages or rows</label>
-            <input id="rows" name="rows" type="text" placeholder="10 pages" />
-          </div>
-          <div>
-            <label for="deadline">Deadline</label>
-            <input id="deadline" name="deadline" type="text" placeholder="48 hours" />
-          </div>
-          <div>
-            <label for="columns">Columns needed (comma separated)</label>
-            <input
-              id="columns"
-              name="columns"
-              type="text"
-              placeholder="Date, Vendor, Amount"
-              required
-            />
-          </div>
-          <div>
-            <label for="notes">Notes or special instructions</label>
-            <textarea id="notes" name="notes"></textarea>
-          </div>
-          <button class="button" type="submit">Send request</button>
-        </form>
       </section>
 
-      <section class="section">
-        <div class="section-title">
-          <span class="pill">Step 2</span>
-          <h2>How to share your files</h2>
-        </div>
-        <div class="grid">
-          <div class="card reveal" data-reveal>
-            <h3>Google Drive</h3>
-            <p>
-              Upload your files, click Share, set to "Anyone with the link", and
-              paste the link into the form.
-            </p>
-          </div>
-          <div class="card reveal" data-reveal>
-            <h3>Dropbox</h3>
-            <p>
-              Copy the share link for the folder or file and include it in the
-              form. Make sure access is enabled.
-            </p>
-          </div>
-          <div class="card reveal" data-reveal>
-            <h3>Multiple files?</h3>
-            <p>
-              Put them in one folder and share the folder link. I will confirm
-              the exact scope before starting.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
+      <section class="section container">
         <div class="callout reveal" data-reveal>
-          <h2>Need help right away?</h2>
+          <h2>Prefer to talk first?</h2>
           <p>
-            Email a sample file and I will suggest the best package. Typical
-            response time is under 12 hours.
+            Send a single sample file and we will suggest the best package and
+            column structure for your workflow.
           </p>
           <a class="button" href="index.html">Back to home</a>
         </div>
       </section>
+    </main>
 
-      <footer class="footer">
+    <footer class="footer">
+      <div class="container">
         <p>CleanFile Studio &copy; <span data-year></span></p>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
