@@ -324,6 +324,11 @@ h4 {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
+.stack {
+  display: grid;
+  gap: 14px;
+}
+
 .card {
   background: var(--surface);
   border-radius: 20px;
@@ -453,6 +458,22 @@ h4 {
   border-radius: 999px;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.clean-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.clean-list li::before {
+  content: \"•\";
+  color: var(--accent);
+  margin-right: 8px;
 }
 
 .form {
