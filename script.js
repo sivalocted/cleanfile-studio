@@ -4,72 +4,64 @@ const days = [
     date: "February 7",
     message: "A rose for every time you made my world bloom.",
     wish: "You are my favorite flower.",
-    image:
-      "https://images.unsplash.com/photo-1673923251625-40938dde32eb?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=60&w=3000",
-    alt: "Pink rose on a soft background",
+    image: "assets/rose-day.jpg",
+    alt: "Mahalakshmi on Rose Day",
   },
   {
     title: "Propose Day",
     date: "February 8",
     message: "I choose you today, tomorrow, and for every day after.",
     wish: "Will you be my forever?",
-    image:
-      "https://images.unsplash.com/photo-1712192248408-cab8d979cf52?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
-    alt: "Hands with a promise ring",
+    image: "assets/propose-day.jpg",
+    alt: "Mahalakshmi on Propose Day",
   },
   {
     title: "Chocolate Day",
     date: "February 9",
     message: "Sweet treats for the sweetest person in my life.",
     wish: "Keep smiling, my love.",
-    image:
-      "https://images.unsplash.com/photo-1598112154833-4fe3f4047e32?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=60&w=3000",
-    alt: "Heart-shaped candy sweets",
+    image: "assets/chocolate-day.jpg",
+    alt: "Mahalakshmi on Chocolate Day",
   },
   {
     title: "Teddy Day",
     date: "February 10",
     message: "Sending you a teddy-soft hug across the miles.",
     wish: "Snuggle up with my love.",
-    image:
-      "https://images.unsplash.com/photo-1628143475394-b9086bdcdd9b?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=60&w=3000",
-    alt: "Teddy bears with hearts",
+    image: "assets/teddy-day.jpg",
+    alt: "Mahalakshmi on Teddy Day",
   },
   {
     title: "Promise Day",
     date: "February 11",
     message: "I promise to listen, laugh, and love you endlessly.",
     wish: "You can always count on me.",
-    image:
-      "https://images.unsplash.com/photo-1718937245434-29c0be8bb425?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=60&w=3000",
-    alt: "Close-up of two people holding hands",
+    image: "assets/promise-day.jpg",
+    alt: "Mahalakshmi on Promise Day",
   },
   {
     title: "Hug Day",
     date: "February 12",
     message: "If you could feel my hug right now, you'd never let go.",
     wish: "Wrapped in my love.",
-    image:
-      "https://images.unsplash.com/photo-1528568257878-f03be8c0834b?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=60&w=3000",
-    alt: "Couple hugging in a warm moment",
+    image: "assets/hug-day.jpg",
+    alt: "Mahalakshmi on Hug Day",
   },
   {
     title: "Kiss Day",
     date: "February 13",
     message: "A kiss that says thank you for being my everything.",
     wish: "Just you and me.",
-    image:
-      "https://images.unsplash.com/photo-1743642638578-6f32c33ab977?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=60&w=3000",
-    alt: "Couple sharing a kiss",
+    image: "assets/kiss-day.jpg",
+    alt: "Mahalakshmi on Kiss Day",
   },
   {
     title: "Valentine's Day",
     date: "February 14",
     message: "Happy Valentine's Day, Mahalakshmi. You are my heart.",
     wish: "Forever starts now.",
-    image:
-      "https://images.unsplash.com/photo-1596040173382-8756f9ad16f2?fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=60&w=3000",
-    alt: "Love hearts and decorations",
+    image: "assets/valentines-day.jpg",
+    alt: "Mahalakshmi on Valentine's Day",
   },
 ];
 
