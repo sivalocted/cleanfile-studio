@@ -82,9 +82,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("[data-intake-form]");
   const formStatus = document.querySelector("[data-form-status]");
+  const hiddenIframe = document.querySelector("iframe[name='hidden_iframe']");
+  let formSubmitted = false;
+
   if (form && formStatus) {
     form.addEventListener("submit", () => {
-      formStatus.classList.add("is-visible");
+      formSubmitted = true;
+    });
+  }
+
+  if (hiddenIframe && formStatus) {
+    hiddenIframe.addEventListener("load", () => {
+      if (formSubmitted) {
+        formStatus.classList.add("is-visible");
+        formSubmitted = false;
+      }
     });
   }
 

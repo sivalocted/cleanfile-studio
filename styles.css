@@ -110,7 +110,7 @@ body.theme-transition * {
 }
 
 .top-banner {
-  background: linear-gradient(120deg, rgba(0, 102, 204, 0.12), rgba(90, 200, 250, 0.08));
+  background: linear-gradient(120deg, rgba(0, 102, 204, 0.08), rgba(90, 200, 250, 0.05));
   color: var(--ink);
   font-size: 0.85rem;
   padding: 12px 0;
@@ -665,10 +665,6 @@ body.theme-transition * {
 
 @media (max-width: 700px) {
   .top-banner {
-    font-size: 0.8rem;
-  }
-
-  .top-banner .button {
     display: none;
   }
 
