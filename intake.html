@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,10 @@
         <div class="nav-links">
           <a href="index.html#pricing">Pricing</a>
           <a class="button small" href="index.html">Back to home</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+            <span class="dot"></span>
+            <span data-theme-label>Light</span>
+          </button>
         </div>
       </div>
     </header>
@@ -37,11 +41,11 @@
           <div class="eyebrow">Intake</div>
           <h1>Tell us about your files.</h1>
           <p>
-            Use our secure Google Form to share file links, columns, and
-            deadlines. We respond with a quote and timeline within 12 hours.
+            Fill the form below and we will confirm scope, pricing, and timeline.
+            You can request a free sample preview first.
           </p>
           <div class="meta-row">
-            <span class="meta-pill">Google Form intake</span>
+            <span class="meta-pill">Quotes in 12 hours</span>
             <span class="meta-pill">Sample preview included</span>
           </div>
         </div>
@@ -49,24 +53,73 @@
 
       <section class="section container" style="padding-top: 30px;">
         <div class="notice">
-          The form is embedded below so clients can submit without leaving the
-          site. We never request direct uploads here.
+          This form submits directly to your Google Form in the background. No
+          redirects for your clients.
         </div>
 
         <div class="split" style="margin-top: 24px;">
           <div class="card stack reveal" data-reveal>
             <h3>Start your intake</h3>
             <p>
-              Fill the form below. Share a Drive or Dropbox link and list the
-              columns you need. We respond within 12 hours.
+              Share a Drive or Dropbox link and list the columns you need. We
+              respond within 12 hours.
             </p>
-            <div class="iframe-wrap">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSe_V96VN-LxpUmqWwnnk4HqEQrIiLG-GXclNixAYSqGJFjYOQ/viewform?embedded=true"
-                loading="lazy"
-                title="CleanFile Studio Intake Form"
-              ></iframe>
-            </div>
+            <form
+              class="form"
+              data-intake-form
+              action="https://docs.google.com/forms/d/e/1FAIpQLSe_V96VN-LxpUmqWwnnk4HqEQrIiLG-GXclNixAYSqGJFjYOQ/formResponse"
+              method="POST"
+              target="hidden_iframe"
+            >
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="full-name">Full name</label>
+                  <input id="full-name" name="entry.000000000" type="text" required />
+                </div>
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input id="email" name="entry.000000001" type="email" required />
+                </div>
+                <div class="form-field">
+                  <label for="company">Company (optional)</label>
+                  <input id="company" name="entry.000000002" type="text" />
+                </div>
+                <div class="form-field">
+                  <label for="file-link">File link (Drive/Dropbox)</label>
+                  <input id="file-link" name="entry.000000003" type="url" required />
+                </div>
+                <div class="form-field">
+                  <label for="file-type">File type</label>
+                  <select id="file-type" name="entry.000000004" required>
+                    <option value="PDF">PDF</option>
+                    <option value="Scan/Image">Scan / Image</option>
+                    <option value="Mixed">Mixed files</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="pages">Approximate pages or rows</label>
+                  <input id="pages" name="entry.000000005" type="text" />
+                </div>
+                <div class="form-field">
+                  <label for="deadline">Deadline</label>
+                  <input id="deadline" name="entry.000000006" type="text" />
+                </div>
+                <div class="form-field">
+                  <label for="columns">Columns needed (comma separated)</label>
+                  <input id="columns" name="entry.000000007" type="text" required />
+                </div>
+                <div class="form-field full">
+                  <label for="notes">Notes or special instructions</label>
+                  <textarea id="notes" name="entry.000000008"></textarea>
+                </div>
+              </div>
+              <button class="button" type="submit">Submit intake</button>
+              <div class="form-status" data-form-status>
+                Thanks! Your request was sent. We will reply within 12 hours.
+              </div>
+            </form>
+            <iframe class="form-hidden" name="hidden_iframe" title="hidden"></iframe>
             <div>
               <h4>Have this ready</h4>
               <ul class="clean-list">

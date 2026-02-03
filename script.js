@@ -3,6 +3,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("[data-header]");
   const navLinks = document.querySelectorAll("[data-nav] a");
   const sections = Array.from(document.querySelectorAll("section[id]"));
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+  const themeLabel = document.querySelector("[data-theme-label]");
+  const root = document.documentElement;
+
+  const applyTheme = (theme) => {
+    root.setAttribute("data-theme", theme);
+    if (themeToggle) {
+      themeToggle.setAttribute("aria-pressed", theme === "dark");
+    }
+    if (themeLabel) {
+      themeLabel.textContent = theme === "dark" ? "Dark" : "Light";
+    }
+  };
+
+  const storedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(storedTheme || (prefersDark ? "dark" : "light"));
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.body.classList.add("theme-transition");
+      applyTheme(next);
+      localStorage.setItem("theme", next);
+      window.setTimeout(() => {
+        document.body.classList.remove("theme-transition");
+      }, 450);
+    });
+  }
 
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -49,6 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     sections.forEach((section) => navObserver.observe(section));
+  }
+
+  const form = document.querySelector("[data-intake-form]");
+  const formStatus = document.querySelector("[data-form-status]");
+  if (form && formStatus) {
+    form.addEventListener("submit", () => {
+      formStatus.classList.add("is-visible");
+    });
   }
 
   document.querySelectorAll("[data-year]").forEach((el) => {
