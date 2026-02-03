@@ -577,15 +577,58 @@ body.theme-transition * {
 
 .form-status {
   display: none;
-  padding: 12px 14px;
-  border-radius: 14px;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 16px;
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--ink);
   font-weight: 600;
 }
 
 .form-status.is-visible {
+  display: flex;
+}
+
+.form-status span {
   display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.checkmark {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+}
+
+.checkmark__circle,
+.checkmark__check {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+}
+
+.form-status.is-visible .checkmark__circle {
+  animation: stroke 0.6s ease forwards;
+}
+
+.form-status.is-visible .checkmark__check {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.4s ease 0.35s forwards;
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .notice {

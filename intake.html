@@ -132,8 +132,18 @@
                 </div>
               </div>
               <button class="button" type="submit">Submit intake</button>
-              <div class="form-status" data-form-status>
-                Thanks! Your request was sent. We will reply within 12 hours.
+              <div class="form-status" data-form-status role="status" aria-live="polite">
+                <svg class="checkmark" viewBox="0 0 52 52" aria-hidden="true">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="24" />
+                  <path
+                    class="checkmark__check"
+                    d="M15 27l7 7 15-16"
+                  />
+                </svg>
+                <div>
+                  <strong>Request sent.</strong>
+                  <span>We will reply within 12 hours.</span>
+                </div>
               </div>
             </form>
             <iframe class="form-hidden" name="hidden_iframe" title="hidden"></iframe>

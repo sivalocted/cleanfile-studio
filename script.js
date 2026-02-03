@@ -94,6 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hiddenIframe && formStatus) {
     hiddenIframe.addEventListener("load", () => {
       if (formSubmitted) {
+        formStatus.classList.remove("is-visible");
+        void formStatus.offsetWidth;
         formStatus.classList.add("is-visible");
         formSubmitted = false;
       }
